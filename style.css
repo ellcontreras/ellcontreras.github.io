@@ -23,10 +23,13 @@
     display: table;
 }
 body{
+    padding: 0;
+    border: 0;
     margin: 0;
     background: linear-gradient(#00B182, #008763);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 1000px;
 }
 div.container {
     /* padding: 5em; */
