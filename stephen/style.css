@@ -4,10 +4,6 @@ html {
     overflow: hidden;
 }
   
-body{
-    padding-left: 150px;
-}
-
 #stars {
 width: 1px;
 height: 1px;
@@ -55,5 +51,6 @@ to {
 }
 
 img {
-    margin-top: 15em
+    margin-top: 15em;
+    padding-left: 150px;    
 }
