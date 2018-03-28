@@ -1,83 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Luis Contreras - Programador</title>
+  <script data-ionic="inject">
+    (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.9.2';i.angular='5.2.9';i.staticDir='build/';})(window);
+  </script>
+  <meta charset="UTF-8">
+  <title>Ionic App</title>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
 
-    <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4e8ef7">
 
-    <!-- Font awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- cordova.js required for cordova apps (remove if not needed) -->
+  <script src="cordova.js"></script>
+
+  <!-- un-comment this code to enable service worker
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+    }
+  </script>-->
+
+  <link href="build/main.css" rel="stylesheet">
+
 </head>
 <body>
-	
-    <div class="container">    
-        <center>
-            <div class="row">
-                <div class="col-4"></div>
-                <div class="col-4">
-                    <div class="box" id="box">
-                        <h1>Luis Contreras Guerra</h1>
-                    </div>
 
-                    <div class="img-perfil" id="imgPerfil">
-                        <img src="https://scontent-dft4-2.xx.fbcdn.net/v/t1.0-9/22853268_1497851526965864_8204423586284357717_n.jpg?oh=07d43a46dc9224e94d7c7bf41239cb03&oe=5AF23164" alt="">
-                    </div>       
-                </div>
-                <div class="col-4"></div>
-            </div>
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8">
-                    <h2><a href="chat/index.html">Demo del chat</a></h2>
-                    <h2><a href="stephen/">RIP Stephen</a></h2>
-                    <br>
-                    <ul>
-                        <li class="item"><a target="__blank" href="https://facebook.com/luisguerra495"> <i class="fa fa-facebook"></i> Facebook</a></li>
-                        <li class="item"><a target="__blank" href="https://twitter.com/ellcontreras"> <i class="fa fa-twitter"></i> Twitter</a></li>
-                        <li class="item"><a target="__blank" href="https://github.com/obsinqsob01"> <i class="fa fa-github"></i> Github</a></li>
-                        <li class="item"><a target="__blank" href="https://instagram.com/luisguerra495"> <i class="fa fa-instagram"></i> Instagram</a></li>
-                    </ul>
-                </div>
-                <div class="col-2"></div>
-            </div>
-        </center>
-    </div>
-    <!-- <div class="container-centro">
-        <div class="row">
-            <h1 class="titulo">Bio</h1>
-            Programador web y de apps
-        </div>
-        <br>
-        <hr>
-        <h1 class="titulo">Proyectos</h1>
-        <div class="row">
-            <div class="col-4">
-                <div id="proyectoFripped">
-                    <a id="frippedWeb" target="__blank" href="http://www.fripped.esy.es">
-                        <img src="img/Fripped 3.png"  alt="">
-                        <div id="frippedDiv">
-    
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-4">
-                <img src="img/">
-            </div>
-        </div>
-    </div> -->
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app></ion-app>
 
-    <!-- <footer class="container-1 row">
-        <div class="col-4"></div>
-       <div class="col-4">
-            <h2>luisguerra495@gmail.com</h2>
-       </div>
-       <div class="col-4"></div>
-    </footer> -->
+  <!-- The polyfills js is generated during the build process -->
+  <script src="build/polyfills.js"></script>
 
-    <script src="script.js"></script>
+  <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+  <script src="build/vendor.js"></script>
+
+  <!-- The main bundle js is generated during the build process -->
+  <script src="build/main.js"></script>
+
 </body>
 </html>
