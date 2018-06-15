@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-}
+}   
 
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
@@ -149,7 +149,7 @@ footer h1 {
 
 @media only screen and (min-width: 1720px) {
     .center {
-        padding: 10% !important;
+        padding: 5% !important;
     }
     .title {
         font-size: 100px;
