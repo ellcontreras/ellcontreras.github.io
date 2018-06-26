@@ -1,0 +1,87 @@
+body, html {
+	height: 100%;
+}
+body {
+	background-color: #3c4556;
+}
+
+img {
+    width: 25%;
+    border-radius: 50%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.is-info {
+    background-color: #282a36!important;
+}
+
+.is-pink {
+    background-color: #f876c1;
+}
+
+.is-green {
+    background-color: #4be173;
+}
+
+.is-blue {
+    background-color: #86e0f4;
+}
+
+.is-blue-marine {
+    background-color: #6272a4;
+}
+
+.text-whiter {
+    color: #f5f5f0;
+}
+
+.text-pink {
+    color: #f876c1;
+}
+
+.text-green {
+    color: #4be173;
+}
+
+.text-blue {
+    color: #86e0f4;
+}
+
+.text-blue-marine {
+    color: #6272a4;
+}
+
+.inp {
+    background-color: transparent;
+    border: none;
+}
+
+#skillsContent, #projectsContent {
+    display: none;
+}
+
+#skillsContent, #projectsContent, #profileContent {
+    animation-name: category;
+    animation-duration: 500ms;
+}
+
+#profile, #skills, #projects {
+    cursor: pointer;
+}
+
+@keyframes category {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
