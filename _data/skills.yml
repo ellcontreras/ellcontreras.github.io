@@ -1,7 +1,12 @@
 --- 
 - 
-  description: "example of description"
+  description: "Me gusta jugar con javascript por como es el lenguaje"
   name: Javascript
 - 
-  description: "i love golang"
+  description: "Soy el creador de echo-cli, uso go para hacer practicas con servidores web"
   name: Golang
+  
+  - 
+  description: "En mi servicio uso php para hacer backends, especificamente me gusta codeIgniter"
+  name: PHP
+  
