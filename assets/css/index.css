@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+}
+
 #hero-home {
     width: 100% !important;
 
