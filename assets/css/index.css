@@ -6,7 +6,7 @@
 }
 
 body {
-    background:linear-gradient(110deg, #006acd 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #f2fff5 70%, #49f2a9 70%);
+    background:linear-gradient(110deg, #006acd 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #fafafa 70%, #49f2a9 70%);
 }
 
 .is-blue-mine {
