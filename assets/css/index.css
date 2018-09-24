@@ -13,3 +13,9 @@ body {
     background-color: #006acd;
     color: white;
 }
+
+footer {
+    padding: 1em;
+    background: rgba(167, 167, 167, 0.7);
+    font-weight: 900;
+}
