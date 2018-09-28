@@ -3,17 +3,17 @@ html, body {
     height: 100% !important;
 }
 
+html {
+    background:linear-gradient(110deg, #006acd 30%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 155%, #fafafa 70%, #49f2a9 15%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 #hero-home {
     width: 100% !important;
 
     display: flex;
     justify-content: center;
-}
-
-body {
-    background:linear-gradient(110deg, #006acd 30%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 155%, #fafafa 70%, #49f2a9 15%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 .is-blue-mine {
