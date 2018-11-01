@@ -36,70 +36,16 @@
       <span class="tag is-medium is-link">Now</span>
     </header>
     <!-- Content Start -->
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <p class="heading">November 2018</p>
-        <p>I will attend as a speaker :speech_balloon: in <a href="http://devfestcancun.com/">DevFest Cancún.</a></p>
+    {% for post in site.posts %}
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <p class="heading">{{ blog.date }}</p>
+          <p>{{ blog.content }}</p>
+        </div>
       </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <p class="heading">September 2018</p>
-        <p>Comm, plattform to find people to make projects :couple::couple: <a href="https://github.com/Obsinqsob01/Comm">Github :octocat:</a></p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <p class="heading">September 2018</p>
-        <p>:pencil: Api for a temporal task list <a href="https://github.com/Obsinqsob01/fastAPI">Github :octocat:</a></p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <p class="heading">August 2018</p>
-        <p><a href="https://github.com/Obsinqsob01">Github Campus Expert :triangular_flag_on_post:</a></p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <p class="heading">August 2018</p>
-        <p><a href="https://eastudy.github.io">eastudy founder :pencil2:</a></p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <p class="heading">July 2018</p>
-        <p>Android programmer at <a href="https://losdesarrolladores.com">Los Desarolladores</a>:iphone:</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <p class="heading">June 2018</p>
-        <p>Robotics training for high school kids</p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <p class="heading">June 2018</p>
-        <p><a href="http//cbtis148.edu.mx">Social Service as programmer at my school</a></p>
-      </div>
-    </div>
-    <div class="timeline-item">
-      <div class="timeline-marker"></div>
-      <div class="timeline-content">
-        <p class="heading">May 2018</p>
-        <p>Echo-cli for <a href="https://echo.labstack.com">framework Echo</a> <a href="https://github.com/Obsinqsob01/echo-cli">Github :octocat:</a></p>
-      </div>
-    </div>
-    <!-- Content End -->
+    {% endfor %}
+       <!-- Content End -->
     <!-- <div class="timeline-header">
       <span class="tag is-medium is-primary">End</span>
     </div> -->
