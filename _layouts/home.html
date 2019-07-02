@@ -1,0 +1,112 @@
+---
+  layout: default
+---
+
+<div class="hero is-blue-mine" id="#hero-home">
+  <div class="hero-body">
+    <h1 class="title is-1 has-text-white">Luis Contreras Guerra</h1>
+    <h2 class="subtitle is-2 has-text-white" id="skillshow">Hola mundo!</h2>
+
+    <p><b>Skills:</b></p>
+    <span class="tag">Go</span>
+    <span class="tag">Javascript</span>
+    <span class="tag">Vue</span>
+    <span class="tag">React</span>
+    <span class="tag">Angular</span>
+    <span class="tag">Python</span>
+    <span class="tag">Flask</span>
+    <span class="tag">Firebase</span>
+    <span class="tag">Php</span>
+  </div>
+</div>
+
+<div class="has-text-centered" style="margin-top: 1em; margin-bottom: 1em;">
+    <img style="width: 30%; height: 100%;" src="{{base_url}}/assets/LCCE.png" alt=""/>
+</div>
+
+<div class="container" style="margin-top: 3em;margin-bottom:3em;">
+  <h1 class="title is-1 has-text-centered">
+    {{ site.data.status.status }}
+  </h1>
+</div>
+
+<div class="container">
+  <div class="timeline is-centered">
+    <header class="timeline-header">
+      <span class="tag is-medium is-link">Now</span>
+    </header>
+    <!-- Content Start -->
+    {% for post in site.posts %}
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <p class="heading">{{ post.simple_date }}</p>
+          <p>{{ post.content }}</p>
+        </div>
+      </div>
+    {% endfor %}
+       <!-- Content End -->
+    <!-- <div class="timeline-header">
+      <span class="tag is-medium is-primary">End</span>
+    </div> -->
+  </div>
+</div>
+
+<style>
+  span {
+    border-right: .05em solid;
+    animation: caret 1s steps(1) infinite;
+  }
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+</style>
+
+<script>
+  // forked from https://codepen.io/danielgroen/pen/VeRPOq
+  document.addEventListener('DOMContentLoaded',function(event){
+    // array with texts to type in typewriter
+    var dataText = [ "GitHub Campus Expert.", "eastudy founder.", "FullStack web developer", "Android with Kotlin", "GoLang Lover <3"];
+    
+    // type one text in the typwriter
+    // keeps calling itself until the text is finished
+    function typeWriter(text, i, fnCallback) {
+      // chekc if text isn't finished yet
+      if (i < (text.length)) {
+        // add next character to h1
+      document.getElementById("skillshow").innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+
+        // wait for a while and call this function again for next character
+        setTimeout(function() {
+          typeWriter(text, i + 1, fnCallback)
+        }, 100);
+      }
+      // text finished, call callback if there is a callback function
+      else if (typeof fnCallback == 'function') {
+        // call callback after timeout
+        setTimeout(fnCallback, 700);
+      }
+    }
+    // start a typewriter animation for a text in the dataText array
+    function StartTextAnimation(i) {
+        if (typeof dataText[i] == 'undefined'){
+            setTimeout(function() {
+              StartTextAnimation(0);
+            }, 5000);
+        }
+        // check if dataText[i] exists
+        if (i < dataText[i].length) {
+          // text exists! start typewriter animation
+        typeWriter(dataText[i], 0, function(){
+          // after callback (and whole text has been animated), start next text
+          StartTextAnimation(i + 1);
+        });
+        }
+      }
+      // start the text animation
+      StartTextAnimation(0);
+  });
+</script>

@@ -1,0 +1,28 @@
+html, body {
+    min-height: 100% !important;
+    height: 100% !important;
+}
+
+html {
+    background:linear-gradient(110deg, #006acd 30%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 155%, #fafafa 70%, #49f2a9 15%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#hero-home {
+    width: 100% !important;
+
+    display: flex;
+    justify-content: center;
+}
+
+.is-blue-mine {
+    background-color: #006acd;
+    color: white;
+}
+
+footer {
+    padding: 1em;
+    background: rgba(238, 238, 238, 0.7);
+    font-weight: 900;
+}
