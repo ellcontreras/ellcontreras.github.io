@@ -1,1 +1,378 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>Obsinqsob01.github.io</title><link href=/css/app.b7e129fd.css rel=preload as=style><link href=/js/app.07609583.js rel=preload as=script><link href=/js/chunk-vendors.0e2b91b6.js rel=preload as=script><link href=/css/app.b7e129fd.css rel=stylesheet></head><body><noscript><strong>We're sorry but Obsinqsob01.github.io doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.0e2b91b6.js></script><script src=/js/app.07609583.js></script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Navidad</title>
+  <style>
+@-webkit-keyframes upthenscale {
+  0% {
+    transform: translateY(250px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    height: 100px;
+    width: 90px;
+    transform: translateY(0);
+  }
+  100% {
+    height: 250px;
+    width: 100%;
+    transform: translateY(0);
+  }
+}
+@keyframes upthenscale {
+  0% {
+    transform: translateY(250px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  60% {
+    height: 100px;
+    width: 90px;
+    transform: translateY(0);
+  }
+  100% {
+    height: 250px;
+    width: 100%;
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes scalethendown {
+  0% {
+    height: 250px;
+    width: 100%;
+    transform: translateY(0);
+  }
+  50% {
+    height: 100px;
+    width: 90px;
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(250px);
+  }
+}
+@keyframes scalethendown {
+  0% {
+    height: 250px;
+    width: 100%;
+    transform: translateY(0);
+  }
+  50% {
+    height: 100px;
+    width: 90px;
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(250px);
+  }
+}
+@-webkit-keyframes waitfade {
+  0%, 50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes waitfade {
+  0%, 50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes wiggle {
+  0% {
+    transform: translateY(310px) rotate(0);
+  }
+  25% {
+    transform: translateY(310px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(310px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(310px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(310px) rotate(0);
+  }
+}
+@keyframes wiggle {
+  0% {
+    transform: translateY(310px) rotate(0);
+  }
+  25% {
+    transform: translateY(310px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(310px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(310px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(310px) rotate(0);
+  }
+}
+.letter {
+  margin: 150px auto;
+  max-width: 350px;
+  height: 375px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.letter--open .paper {
+  -webkit-animation-name: upthenscale;
+          animation-name: upthenscale;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.letter--close .paper {
+  -webkit-animation-name: scalethendown;
+          animation-name: scalethendown;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.letter--open .paper-content {
+  -webkit-animation-name: waitfade;
+          animation-name: waitfade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.letter--open .envelope {
+  -webkit-animation: pause;
+          animation: pause;
+}
+
+.paper-content {
+  color: #545454;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  padding: 25px;
+  opacity: 0;
+}
+
+.paper {
+  height: 50px;
+  width: 90px;
+  background: #f1f0c3;
+  transform: translateY(250px);
+  margin: 0 auto;
+  transition: transform 0.3s 0.1s ease;
+  border-radius: 2px;
+  position: relative;
+}
+
+.envelope {
+  width: 94px;
+  height: 60px;
+  background: #f36363;
+  position: relative;
+  margin: auto;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: box-shadow 0.3s ease;
+  transform: translateY(310px);
+  -webkit-animation: wiggle 0.3s 0.2s infinite;
+          animation: wiggle 0.3s 0.2s infinite;
+}
+.envelope:hover {
+  -webkit-animation: pause;
+          animation: pause;
+}
+.envelope:hover .envelope-paper {
+  transform: translateY(-20px);
+}
+.envelope:hover .envelope-flap {
+  transform: translateY(-45px);
+}
+.envelope:hover .envelope-detail::after {
+  visibility: hidden;
+}
+
+.envelope-paper {
+  height: 50px;
+  width: 90px;
+  background: #f1f0c3;
+  transform: translateY(0);
+  margin: 0 auto;
+  transition: transform 0.3s 0.1s ease;
+  border-radius: 2px;
+  position: absolute;
+  border: 2px solid transparent;
+}
+
+.letter--open .envelope-paper {
+  visibility: hidden;
+}
+
+.letter--open .envelope-detail::after {
+  visibility: hidden;
+}
+
+.letter--close .envelope-paper {
+  visibility: hidden;
+}
+
+.envelope-flap {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 45px solid transparent;
+  border-right: 45px solid transparent;
+  border-bottom: 45px solid #f36363;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  transform: translateY(0);
+}
+
+.letter--open .envelope-flap {
+  transform: translateY(-45px);
+}
+
+.letter--open .envelope-detail {
+  border-top: 2px solid #e25b5b;
+}
+
+.envelope-detail {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  background: #f36363;
+  border-top: 2px solid transparent;
+}
+.envelope-detail:before {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background: #f36363;
+  display: inline-block;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 30px;
+  margin: auto;
+  transform: rotate(45deg);
+  border: 4px solid #e65454;
+}
+.envelope-detail:after {
+  content: "";
+  width: 70px;
+  height: 70px;
+  background: #f36363;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -45px;
+  margin: auto;
+  transform: rotate(45deg);
+  border: 4px solid #e65454;
+}
+
+.envelope__fold {
+  height: 25px;
+  width: 86px;
+  background: #f36363;
+  border: 4px solid #e65454;
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: all 0.3s ease;
+  border-radius: 3px;
+}
+
+.paper-close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  display: inline-block;
+  cursor: pointer;
+}
+  </style>
+</head>
+<body>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<div class="letter">
+  <div class="envelope">
+    <div class="envelope-flap"></div>
+    <div class="envelope-paper"></div>
+    <div class="envelope-detail"></div>
+  </div>
+  <div class="paper">
+    <div class="paper-content">
+      <div class="paper-close">x</div>
+      Primero que nada buenas buenas hediondilla</br></br>espero te guste</br></br>-Contreras
+      <br><a style="color:deepskyblue;font-size: 10px;" href="letter.html">dale click aqui para ir a lo siguiente, (despues de ahi es puro click)</a>
+    </div>
+  </div>
+</div>
+<audio id="myAudio" controls autoplay style="display: none;">
+  <source src="./assets/HUEVITO CHOPECHA.mp3" type="audio/mp3">
+</audio>
+</body>
+  <script>
+    alert("Espero te guste, le das en aceptar y luego otro click en el mismo lugar y abres tu carta");
+
+    document.body.addEventListener("mousemove", function () {
+      document.getElementById("myAudio").play();
+    })
+
+    document.querySelector('.envelope').addEventListener('click', function(){
+  if (document.querySelector('.letter').classList.contains('letter--open')){
+    document.querySelector('.letter').classList.remove('letter--open');
+    document.querySelector('.letter').classList.add('letter--close');
+    setTimeout(function(){
+      document.querySelector('.letter').classList.remove('letter--close');
+    }, 600);    
+  } else {
+    document.querySelector('.letter').classList.remove('letter--close');
+    document.querySelector('.letter').classList.add('letter--open');
+  }
+});
+
+document.querySelector('.paper-close').addEventListener('click', function(){   document.querySelector('.letter').classList.remove('letter--open');
+  document.querySelector('.letter').classList.add('letter--close');
+  setTimeout(function(){
+    document.querySelector('.letter').classList.remove('letter--close');
+  }, 600);
+});
+  </script>
+</body>
+</html>
